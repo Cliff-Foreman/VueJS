@@ -1,15 +1,25 @@
 <html>
 
 <head>
-	<title>Test</title>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-	<div id='root'>
-        <h1>{{ greeting }}</h1>
-        <input v-model="giss" @keyup.enter="addName">
-        <button @click="testing">Greet</button>
+    <div id="container">
+        <div id='root'>
+            <div id="header">
+                <h1>{{ greeting }}</h1>
+                <h1 v-if="greeting === blank">Heading</h1>
+            </div>
+            <div id="bot">
+                <input v-model="giss">
+            </div>
+            <div id="bott">
+                <button @click="testing">Greet</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
     <script src="index.js"></script>
